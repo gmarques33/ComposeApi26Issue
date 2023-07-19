@@ -18,9 +18,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.testTag
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -45,11 +43,8 @@ class MainActivity : ComponentActivity() {
           ModalBottomSheetLayout(
             sheetState = modalBottomSheetState,
             sheetContent = {
-              Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier.testTag("Create.Root.name")
-              ) {
-                repeat(6) {
+              Column {
+                repeat(3) {
                   Text(text = "Testing")
                 }
               }
