@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
             sheetState = modalBottomSheetState,
             sheetContent = {
               Column {
-                repeat(3) {
+                repeat(6) {
                   Text(text = "Testing")
                 }
               }
